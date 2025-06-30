@@ -1,0 +1,44 @@
+/* Reset CSS léger */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    font-family: inherit;
+}
+body {
+    line-height: 1.5;
+    background: #fff;
+}
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+button, input, textarea, select {
+    font: inherit;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
