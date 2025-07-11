@@ -6,169 +6,9 @@
     <title>Faire un don - AIPAS</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600|Open+Sans:400,700&display=swap">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/don.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        body {
-            background: #f6f8fa;
-            font-family: 'Poppins', 'Open Sans', Arial, sans-serif;
-        }
-        .don-main {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem 0;
-        }
-        .don-card {
-            background: #fff;
-            border-radius: 18px;
-            box-shadow: 0 6px 32px rgba(30,58,92,0.13);
-            border: 1.5px solid #e0e4ea;
-            padding: 2.5rem 2.2rem 2rem 2.2rem;
-            max-width: 440px;
-            width: 100%;
-            margin: 0 1rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-        }
-        .don-card h1 {
-            text-align: center;
-            color: var(--primary-blue, #1e3a5c);
-            margin-bottom: 0.7rem;
-            font-size: 2.1rem;
-            font-weight: 700;
-        }
-        .don-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.1rem;
-        }
-        .don-form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.4rem;
-        }
-        .don-form label {
-            font-weight: 600;
-            color: #2d3a4b;
-            margin-bottom: 0.1rem;
-        }
-        .don-form input[type="text"],
-        .don-form input[type="email"],
-        .don-form input[type="number"] {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            border: 1.5px solid #e0e4ea;
-            border-radius: 9px;
-            font-size: 1rem;
-            background: #f9fafb;
-            transition: border 0.2s;
-        }
-        .don-form input:focus {
-            border-color: var(--accent-orange, #ffb366);
-            outline: none;
-        }
-        .don-form input::placeholder {
-            color: #b0b6be;
-            font-size: 0.98rem;
-        }
-        .don-form .don-form-row {
-            display: flex;
-            gap: 1rem;
-        }
-        .don-form .don-form-row > .don-form-group {
-            flex: 1 1 0;
-        }
-        .don-form .payment-label {
-            font-weight: 600;
-            color: #2d3a4b;
-            margin-bottom: 0.3rem;
-        }
-        .payment-methods {
-            display: flex;
-            gap: 0.7rem;
-            margin-bottom: 0.2rem;
-            flex-wrap: wrap;
-        }
-        .payment-btn {
-            flex: 1 1 45%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            background: #f3f4f6;
-            border: 2px solid #e0e4ea;
-            border-radius: 9px;
-            padding: 0.7rem 0.5rem;
-            font-weight: 600;
-            color: #2d3a4b;
-            font-size: 1.08rem;
-            cursor: pointer;
-            transition: border 0.2s, background 0.2s, color 0.2s;
-            position: relative;
-            outline: none;
-        }
-        .payment-btn.selected, .payment-btn:focus {
-            border-color: var(--accent-orange, #ffb366);
-            background: #fff7ed;
-            color: var(--primary-blue, #1e3a5c);
-        }
-        .payment-btn .fa-brands, .payment-btn .fa-cc-visa, .payment-btn .fa-cc-mastercard {
-            font-size: 1.4rem;
-        }
-        .don-form button[type="submit"] {
-            width: 100%;
-            background: var(--accent-orange, #ffb366);
-            color: #fff;
-            border: none;
-            border-radius: 30px;
-            padding: 1rem 0;
-            font-size: 1.18rem;
-            font-weight: bold;
-            box-shadow: 0 2px 8px rgba(30,58,92,0.08);
-            cursor: pointer;
-            margin-top: 0.5rem;
-            transition: background 0.2s, transform 0.2s;
-        }
-        .don-form button[type="submit"]:hover {
-            background: var(--primary-blue, #1e3a5c);
-            color: var(--accent-orange, #ffb366);
-            transform: translateY(-2px) scale(1.03);
-        }
-        .confirmation-message {
-            display: none;
-            margin-top: 1.5rem;
-            background: #e6f9ed;
-            color: #1e7e34;
-            border: 1.5px solid #b7e4c7;
-            border-radius: 12px;
-            padding: 1.3rem 1rem;
-            text-align: center;
-            font-size: 1.18rem;
-            font-weight: 600;
-            box-shadow: 0 2px 8px rgba(30,58,92,0.06);
-            animation: fadeIn 0.5s;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @media (max-width: 600px) {
-            .don-card {
-                padding: 1.2rem 0.5rem;
-            }
-            .don-form .don-form-row {
-                flex-direction: column;
-                gap: 0.2rem;
-            }
-            .payment-methods {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-        }
-    </style>
+    
 </head>
 <body>
     <main class="don-main">
@@ -214,6 +54,7 @@
                         </button>
                     </div>
                     <input type="hidden" name="paiement" id="paiement" required>
+                    <div id="paymentFields"></div>
                 </div>
                 <button type="submit">Valider le don</button>
             </form>
@@ -223,35 +64,6 @@
             </div>
         </div>
     </main>
-    <script>
-        // Sélection visuelle du moyen de paiement
-        const paymentBtns = document.querySelectorAll('.payment-btn');
-        const paiementInput = document.getElementById('paiement');
-        paymentBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                paymentBtns.forEach(b => b.classList.remove('selected'));
-                this.classList.add('selected');
-                paiementInput.value = this.getAttribute('data-value');
-            });
-        });
-        // Validation du formulaire
-        document.getElementById('donForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            if (!paiementInput.value) {
-                paiementInput.setCustomValidity('Veuillez choisir un moyen de paiement.');
-                paiementInput.reportValidity();
-                return;
-            } else {
-                paiementInput.setCustomValidity('');
-            }
-            document.getElementById('confirmationMessage').style.display = 'block';
-            this.reset();
-            paymentBtns.forEach(b => b.classList.remove('selected'));
-            paiementInput.value = '';
-            setTimeout(() => {
-                document.getElementById('confirmationMessage').style.display = 'none';
-            }, 8000);
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html> 

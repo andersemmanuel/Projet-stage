@@ -1,35 +1,61 @@
 body {
     background: #f6f8fa;
+    background-image: url('../asset/backgroud.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     font-family: 'Poppins', 'Open Sans', Arial, sans-serif;
+
 }
-.don-container {
-    max-width: 430px;
-    margin: 3rem auto;
+.don-main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+.don-card {
     background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(30,58,92,0.10);
-    padding: 2.2rem 2rem 2rem 2rem;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(30,58,92,0.13);
+    border: 1.5px solid #e0e4ea;
+    padding: 2.5rem 2.2rem 2rem 2.2rem;
+    max-width: 440px;
+    width: 100%;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
 }
-.don-container h1 {
+.don-card h1 {
     text-align: center;
     color: var(--primary-blue, #1e3a5c);
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
+    margin-bottom: 0.7rem;
+    font-size: 2.1rem;
+    font-weight: 700;
+}
+.don-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+.don-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
 }
 .don-form label {
-    display: block;
-    margin-bottom: 0.3rem;
     font-weight: 600;
     color: #2d3a4b;
+    margin-bottom: 0.1rem;
 }
 .don-form input[type="text"],
 .don-form input[type="email"],
 .don-form input[type="number"] {
     width: 100%;
-    padding: 0.7rem;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    margin-bottom: 1.1rem;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #e0e4ea;
+    border-radius: 9px;
     font-size: 1rem;
     background: #f9fafb;
     transition: border 0.2s;
@@ -38,36 +64,53 @@ body {
     border-color: var(--accent-orange, #ffb366);
     outline: none;
 }
-.don-form .payment-methods {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.7rem;
-    margin-bottom: 1.2rem;
+.don-form input::placeholder {
+    color: #b0b6be;
+    font-size: 0.98rem;
 }
-.don-form .payment-method {
-    flex: 1 1 45%;
-    background: #f3f4f6;
-    border: 1.5px solid #d1d5db;
-    border-radius: 8px;
-    padding: 0.7rem 0.5rem;
-    text-align: center;
-    cursor: pointer;
+.don-form .don-form-row {
+    display: flex;
+    gap: 1rem;
+}
+.don-form .don-form-row > .don-form-group {
+    flex: 1 1 0;
+}
+.don-form .payment-label {
     font-weight: 600;
     color: #2d3a4b;
-    transition: border 0.2s, background 0.2s;
-    position: relative;
+    margin-bottom: 0.3rem;
 }
-.don-form .payment-method.selected {
+.payment-methods {
+    display: flex;
+    gap: 0.7rem;
+    margin-bottom: 0.2rem;
+    flex-wrap: wrap;
+}
+.payment-btn {
+    flex: 1 1 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #f3f4f6;
+    border: 2px solid #e0e4ea;
+    border-radius: 9px;
+    padding: 0.7rem 0.5rem;
+    font-weight: 600;
+    color: #2d3a4b;
+    font-size: 1.08rem;
+    cursor: pointer;
+    transition: border 0.2s, background 0.2s, color 0.2s;
+    position: relative;
+    outline: none;
+}
+.payment-btn.selected, .payment-btn:focus {
     border-color: var(--accent-orange, #ffb366);
     background: #fff7ed;
+    color: var(--primary-blue, #1e3a5c);
 }
-.don-form .payment-method input[type="radio"] {
-    display: none;
-}
-.don-form .payment-method .icon {
-    display: block;
-    font-size: 1.5rem;
-    margin-bottom: 0.3rem;
+.payment-btn .fa-brands, .payment-btn .fa-cc-visa, .payment-btn .fa-cc-mastercard {
+    font-size: 1.4rem;
 }
 .don-form button[type="submit"] {
     width: 100%;
@@ -75,11 +118,12 @@ body {
     color: #fff;
     border: none;
     border-radius: 30px;
-    padding: 0.9rem 0;
-    font-size: 1.15rem;
+    padding: 1rem 0;
+    font-size: 1.18rem;
     font-weight: bold;
     box-shadow: 0 2px 8px rgba(30,58,92,0.08);
     cursor: pointer;
+    margin-top: 0.5rem;
     transition: background 0.2s, transform 0.2s;
 }
 .don-form button[type="submit"]:hover {
@@ -93,15 +137,38 @@ body {
     background: #e6f9ed;
     color: #1e7e34;
     border: 1.5px solid #b7e4c7;
-    border-radius: 10px;
-    padding: 1.2rem 1rem;
+    border-radius: 12px;
+    padding: 1.3rem 1rem;
     text-align: center;
-    font-size: 1.15rem;
+    font-size: 1.18rem;
     font-weight: 600;
     box-shadow: 0 2px 8px rgba(30,58,92,0.06);
+    animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+#paymentFields {
+    margin-top: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    animation: fadeIn 0.4s;
+}
+#paymentFields .don-form-group {
+    margin-bottom: 0;
 }
 @media (max-width: 600px) {
-    .don-container {
+    .don-card {
         padding: 1.2rem 0.5rem;
+    }
+    .don-form .don-form-row {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+    .payment-methods {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 }
