@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci pour votre don - AIPAS</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/don.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo">
+                <img src="./asset/logo aipas.png" alt="Logo AIPAS">
+            </a>
+        </div>
+    </header>
+    <main class="don-main">
+        <div class="don-card merci-card">
+            <div class="merci-icon"><i class="fas fa-heart"></i></div>
+            <h1>Merci pour votre générosité !</h1>
+            <p class="merci-message">Votre don a bien été pris en compte.<br>Vous contribuez concrètement à nos actions de solidarité.<br><span class="trust-badge"><i class="fas fa-shield-alt"></i> Paiement sécurisé</span></p>
+            <div class="merci-share">
+                <span>Partagez votre engagement :</span>
+                <div class="share-btns">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://aipas.org" target="_blank" rel="noopener" class="share-btn fb"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/intent/tweet?text=Je+soutiens+l%27AIPAS+!+https://aipas.org" target="_blank" rel="noopener" class="share-btn tw"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="share-btn link" id="copyLinkBtn"><i class="fas fa-link"></i></a>
+                </div>
+                <span id="copyMsg" class="copy-msg">Lien copié !</span>
+            </div>
+            <a href="index.html" class="btn-primary" style="margin-top:1.2rem;">Retour à l’accueil</a>
+        </div>
+    </main>
+    <script>
+    document.getElementById('copyLinkBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        navigator.clipboard.writeText(window.location.href);
+        document.getElementById('copyMsg').style.opacity = 1;
+        setTimeout(()=>{
+            document.getElementById('copyMsg').style.opacity = 0;
+        }, 1800);
+    });
+    </script>
+</body>
+</html> 

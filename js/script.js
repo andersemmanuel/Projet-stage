@@ -11,9 +11,9 @@ const backToTopBtn = document.querySelector('.back-to-top');
 if (backToTopBtn) {
   window.addEventListener('scroll', () => {
     if(window.scrollY > 300) {
-      backToTopBtn.style.display = 'flex';
+      backToTopBtn.classList.add('visible');
     } else {
-      backToTopBtn.style.display = 'none';
+      backToTopBtn.classList.remove('visible');
     }
   });
   backToTopBtn.addEventListener('click', () => {
@@ -21,15 +21,19 @@ if (backToTopBtn) {
   });
 }
 // Message de remerciement sur clic 'Faire un don'
-const btnDon = document.querySelector('.btn-don');
-if(btnDon) {
-  btnDon.addEventListener('click', (e) => {
-    e.preventDefault();
-    alert('Merci pour votre générosité !');
-  });
-}
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Scroll fluide pour les liens d'ancre internes
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href').slice(1);
+            const target = document.getElementById(targetId);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
     // Gestion dynamique des champs de paiement
     const paymentBtns = document.querySelectorAll('.payment-btn');
     const paiementInput = document.getElementById('paiement');
@@ -97,13 +101,16 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             paiementInput.setCustomValidity('');
         }
-        confirmationMessage.style.display = 'block';
-        this.reset();
-        clearPaymentFields();
-        paymentBtns.forEach(b => b.classList.remove('selected'));
-        paiementInput.value = '';
-        setTimeout(() => {
-            confirmationMessage.style.display = 'none';
-        }, 8000);
+        // Redirection vers la page de remerciement
+        window.location.href = 'merci.html';
+        // Ancien comportement supprimé :
+        // confirmationMessage.style.display = 'block';
+        // this.reset();
+        // clearPaymentFields();
+        // paymentBtns.forEach(b => b.classList.remove('selected'));
+        // paiementInput.value = '';
+        // setTimeout(() => {
+        //     confirmationMessage.style.display = 'none';
+        // }, 8000);
     });
 }); 
