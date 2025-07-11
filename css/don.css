@@ -252,3 +252,74 @@ body {
         font-size: 1.05rem;
     }
 }
+.benevole-card {
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 2rem 2.2rem 2rem;
+    max-width: 440px;
+    margin: 2.5rem auto 0 auto;
+    gap: 1.1rem;
+}
+.benevole-desc {
+    font-size: 1.08rem;
+    color: #1e3a5c;
+    margin-bottom: 1.1rem;
+}
+.benevole-form .don-form-row {
+    display: flex;
+    gap: 1rem;
+}
+.benevole-form .don-form-group {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.benevole-form input,
+.benevole-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #e0e4ea;
+    border-radius: 9px;
+    font-size: 1rem;
+    background: #f9fafb;
+    transition: border 0.2s;
+}
+.benevole-form textarea {
+    resize: vertical;
+    min-height: 70px;
+    max-height: 180px;
+}
+.benevole-form input:focus, .benevole-form textarea:focus {
+    border-color: var(--accent-orange, #ffb366);
+    outline: none;
+}
+.benevole-form button[type="submit"] {
+    width: 100%;
+    background: var(--accent-orange, #ffb366);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 1rem 0;
+    font-size: 1.18rem;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(30,58,92,0.08);
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s, transform 0.2s;
+}
+.benevole-form button[type="submit"]:hover {
+    background: var(--primary-blue, #1e3a5c);
+    color: var(--accent-orange, #ffb366);
+    transform: translateY(-2px) scale(1.03);
+}
+@media (max-width: 600px) {
+    .benevole-card {
+        padding: 1.2rem 0.5rem 1.1rem 0.5rem;
+        max-width: 98vw;
+    }
+    .benevole-form .don-form-row {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+}
