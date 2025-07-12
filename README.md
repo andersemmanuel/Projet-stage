@@ -2,77 +2,54 @@
 
 Bienvenue sur le site officiel de l’Association Internationale pour la Paix et la Solidarité (AIPAS).
 
-Ce projet vise à présenter l’association, ses actions et à faciliter la collecte de dons en ligne, avec une expérience utilisateur moderne, claire et accessible à tous.
+Ce site présente l’association, ses actions, et permet de faire un don ou de devenir bénévole en ligne, avec une expérience moderne, accessible et multilingue.
 
 ---
 
 ## ✨ Fonctionnalités principales
 
-- **Page d’accueil** : Présentation de l’association, de ses valeurs et de ses actions.
-- **Page de don** : Formulaire dynamique, sécurisé, avec étapes claires et résumé avant validation.
-- **Navigation sticky** : Menu principal toujours visible en haut de page, avec effet animé.
-- **Scroll fluide** : Navigation agréable entre les sections.
-- **Bouton retour en haut** : Accessible et animé.
-- **Responsive** : Affichage optimisé sur mobile, tablette et ordinateur.
-- **Page de remerciement** : Message personnalisé et options de partage après un don.
-
----
-
-## 🛠️ Technologies utilisées
-
-- **HTML5** (structure des pages)
-- **CSS3** (mise en forme, responsive, animations)
-- **JavaScript** (interactions dynamiques, navigation, formulaire)
-
----
-
-## 📁 Organisation des fichiers
-
-- `index.html` : Page d’accueil
-- `don.html` : Page de don
-- `merci.html` : Page de remerciement après don
-- `/css/` :
-    - `main.css` : Styles généraux et navigation
-    - `don.css` : Styles spécifiques à la page de don
-    - `reset.css` : Réinitialisation des styles navigateurs
-- `/js/` :
-    - `script.js` : Scripts pour la navigation, le formulaire, etc.
-- `/asset/` : Images et logos du site
-
----
-
-## ▶️ Visualiser le projet localement
-
-1. **Téléchargez ou clonez** ce dépôt sur votre ordinateur.
-2. Ouvrez le fichier `index.html` dans votre navigateur.
-3. Naviguez librement entre les pages et testez les fonctionnalités.
+- **Page d’accueil** (FR/EN) : Présentation de l’association, de ses valeurs et de ses actions
+- **Formulaire de don dynamique** (FR/EN) : Sélection du moyen de paiement, champs adaptés, responsive
+- **Page de remerciement** (FR/EN) : Message personnalisé, options de partage, certificat de don téléchargeable
+- **Certificat de don** (FR/EN) : Page prête à imprimer après un don
+- **Page "Devenir bénévole"** (FR/EN) : Explications et formulaire d’inscription
+- **Navigation sticky** : Menu principal toujours visible, effet animé, bouton retour en haut
+- **Sélecteur de langue** : Bascule fluide entre français et anglais sur toutes les pages
+- **Design responsive** : Optimisé pour mobile, tablette et ordinateur
 
 ---
 
 ## 🌐 Lien de déploiement
 
-Le site est accessible en ligne ici :
-
+Le site est accessible ici :
 👉 [https://andersemmanuel.github.io/Projet-stage/](https://andersemmanuel.github.io/Projet-stage/)
 
 ---
 
-## 🚀 Améliorations possibles / À venir
+## 📁 Fichiers et pages principaux
 
-- Ajout d’une FAQ et de témoignages de donateurs
-- Intégration d’un vrai paiement en ligne (API bancaire ou PayPal)
-- Tableau de bord pour l’équipe de l’association
-- Accessibilité renforcée (contraste, navigation clavier)
-- Statistiques d’impact en temps réel
+- `index.html` / `index_en.html` : Accueil (FR/EN)
+- `don.html` / `don_en.html` : Formulaire de don (FR/EN)
+- `merci.html` / `merci_en.html` : Page de remerciement (FR/EN)
+- `certificat.html` / `certificat_en.html` : Certificat de don (FR/EN)
+- `benevole.html` / `benevole_en.html` : Devenir bénévole (FR/EN)
+- `/css/` : Styles principaux (`main.css`, `don.css`, `reset.css`)
+- `/js/` : Scripts d’interactivité (`script.js`, `script_en.js`)
+- `/asset/` : Images et logos
 
 ---
 
-## 🤝 Contribuer / Contact
+## 🚀 À venir / Améliorations futures
 
-Pour toute suggestion, contribution ou question, contactez-nous à :
+- Section FAQ et témoignages de donateurs
+- Intégration d’un vrai paiement en ligne (API bancaire, PayPal…)
+- Tableau de bord pour l’équipe de l’association
+- Accessibilité renforcée (contraste, navigation clavier)
+- Statistiques d’impact en temps réel
+- Traduction d’autres pages si besoin
 
-**contact@aipas.org**
+---
 
-Ou ouvrez une issue sur ce dépôt.
+Pour toute suggestion ou question, contactez-nous à : **contact@aipas.org**
 
 Merci pour votre intérêt et votre soutien à l’AIPAS ! 
