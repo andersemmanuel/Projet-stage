@@ -1,6 +1,6 @@
 # Site de l’Association AIPAS
 
-Bienvenue sur le site officiel de l’Association Internationale pour la Paix et la Solidarité (AIPAS).
+Bienvenue sur le site officiel de l’Association Idée Plus Actions Solidaires (AIPAS).
 
 Ce site présente l’association, ses actions, et permet de faire un don ou de devenir bénévole en ligne, avec une expérience moderne, accessible et multilingue.
 
