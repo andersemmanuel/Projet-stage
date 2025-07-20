@@ -1,4 +1,4 @@
-# Site de l’Association AIPAS
+# Site de l’AIPAS
 
 Bienvenue sur le site officiel de l’Association Idée Plus Actions Solidaires (AIPAS).
 
